@@ -1,0 +1,437 @@
+
+
+/*===========
+Content:
+
+1. Globals
+2. General
+3. Header and menu
+4. Jumbotrone
+5. Main-skills
+6. Portfolio
+7. About-me
+8. Additional-skills
+9. Contacts
+10. Footer
+=============*/
+
+
+
+/*=======
+Colors:
+
+#525a60 - header and about color
+#4bcaff - theme main color (blue) 
+#0f1215 - footer color
+========*/
+
+
+
+/*=========
+globals
+===========*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/*=========
+general
+===========*/
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body a {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+}
+
+body p {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+/*================
+3. Header and menu
+=================*/
+
+.header {
+	background-color: #525a60;
+	line-height: 122px;
+}
+
+.logo,
+.logo .logo-face,
+.logo h2,
+.menu
+ {
+	display: inline-block;
+}
+
+.logo {
+	float: left;
+	height: 100%;
+}
+
+.menu {
+	float: right;
+}
+
+.menu .top-menu li
+ {
+	display: inline-block;
+}
+
+.menu .top-menu li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0px 12px;
+	font-weight: 500;
+}
+
+.menu .top-menu li a:hover {
+	display: block;
+	color: #4bcaff;
+}
+
+
+/*================
+4. Jumbotrone
+=================*/
+
+.jumbotrone {
+	/*background-color: #f5f5f5;*/
+	padding: 50px 0;
+	background-image: url(../img/hero-bg-4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 0% 0%;
+	min-height: 400px;
+}
+
+body .jumbotrone .hello {
+	box-sizing: border-box;
+	max-width: 600px;
+	max-height: 260px;
+	margin: 0 auto;
+	position: relative;	
+	color: #fff;
+	padding: 20px 20px;
+    font-family: 'Jura', sans-serif;
+}
+
+.hello-inner {
+	/*margin: 0 20px;*/
+	position: relative;
+	border: 1px solid #fff;
+	border-bottom: none;
+}
+
+.hello h1,
+.hello h2 {
+	padding: 10px 0 20px 100px;
+	margin-bottom: 0;
+}
+
+a.btn-hello {
+    color: #000;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 15px 0;
+    border-left: 1px solid #4bcaff;
+    border-radius: 0;
+    font-size: 1.3em;
+    transition: 100ms ease-in;
+
+}
+
+a.btn-hello:first-child {
+	border-left: none;
+}
+
+a.btn-hello:hover {
+	background-color: #4bcaff;
+	color: #fff;
+}
+
+.buttons {
+	/*min-height: 30px;*/
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+
+.buttons a {
+	flex-grow: 1;
+	flex-basis: 50%;
+}
+
+.light {
+    position: absolute;
+    min-width: 170px;
+    min-height: 14px;
+    background-color: #4bcaff;
+    top: -8px;
+    left: 50%;
+    /*z-index: 999;*/
+    transform: translateX(-85px);
+    border: 1px solid #fff;
+}
+
+
+/*================
+5. Main-skills
+=================*/
+
+.main-skills {
+	background-color: #4bcaff;
+	padding: 50px 0;
+}
+
+.main-skills h3 {
+	text-transform: uppercase;
+}
+
+.main-skills h2,
+.main-skills h3,
+.main-skills p {
+	color: #fff;
+}
+
+
+/*================
+6. Portfolio
+=================*/
+
+.portfolio {
+	padding: 70px 0;
+}
+
+.portfolio img {
+	margin-bottom: 30px;
+}
+
+.portfolio-item {
+	overflow: hidden;
+	/*border: 1px solid black;*/
+}
+
+.portfolio-item img {
+	/*width: 200%;*/
+}
+
+.portfolio-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: space-between;
+
+}
+
+.portfolio-item {
+	flex-basis: 25%;
+	position: relative;
+	background-position: 50% 50%;
+	background-size: cover;
+	/*padding: 10px;*/
+
+}
+
+a.portfolio-button {
+	width: 75%;
+	margin: 0 auto;
+	background-color: #4bcaff;
+	color: #fff;
+	border-radius: 0;
+}
+
+.portfolio-item:after {
+	content:'';
+    float:left;
+    padding-top:100%;
+}
+
+.portfolio-item:hover .portfolio-inner {
+	opacity: 1;
+}
+
+.portfolio-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 8px;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 400ms ease;
+}
+
+span.portfolio-inner_subheader {
+	color: #cccccc;
+	font-size: 0.7em;
+	font-weight: 300;
+}
+
+h2.portfolio-item_heading {
+	color: #4bcaff; 
+	font-weight: 400;
+
+}
+
+.portfolio-inner h2,
+.portfolio-inner p,
+.portfolio-inner a {
+	opacity: 0;
+	transform: translateY(-8px);
+	transition: 400ms ease;
+}
+
+.portfolio-inner:hover h2,
+.portfolio-inner:hover p,
+.portfolio-inner:hover a
+{
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/*================
+6. About-me
+=================*/
+
+.about-me {
+	/*background-color: #525a60;*/
+	padding: 50px 0;
+	background-image: url(../img/hero-bg-4.jpg);
+	background-attachment: fixed;
+	background-position: 50% 70%;
+
+}
+
+.about-me h2,
+.about-me p {
+	color: #fff;
+}
+
+.about-me a.btn {
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 0;
+}
+
+/*================
+6. Additional-skills
+=================*/
+
+.additional-skills {
+	background-color: #4bcaff;
+	padding: 50px 0;
+}
+
+.additional-skills h2,
+.additional-skills h3,
+.additional-skills p {
+	color: #fff;
+}
+
+/*================
+6. Contacts
+=================*/
+.contacts h2 {
+	color: #fff;
+}
+
+.contacts {
+	background-color: #525a60;
+	padding: 50px 0;
+}
+
+.name,
+.e-mail,
+.message {
+	width: 100%;
+}
+
+input[type="text"] {
+	width: 100%;
+	height: 40px;
+	background-color: #525a60;
+	border: 2px solid #fff;
+	padding: 0 15px;
+}
+
+textarea.message {
+	height: 105px;
+	background-color: #525a60;
+	border: 2px solid #fff;
+	padding: 0 15px;
+}
+
+label {
+	color: #fff;
+}
+
+button[type="submit"] {
+	background-color: #4bcaff;
+	border: none;
+	color: #fff;
+	padding: 15px 100px;
+	float: right;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.column-half {
+	width: 48%;
+	float: left;
+	margin-right: 44px;
+}
+
+.column-half:last-of-type {
+	margin-right: 0;
+}
+
+/*=========
+10. Footer
+==========*/
+
+.footer {
+	/*min-height: 132px;*/
+	background-color: #0f1215;
+	font-size: 1.1em;
+	font-weight: 400;
+}
+
+.footer-menu li {
+	display: inline-block;
+	padding: 50px 10px;
+
+}
+
+.footer-menu li a {
+	color: #9ea6ab;
+}
+
+p.copyright {
+	color: #fff;
+	padding: 50px 0;
+	color: #9ea6ab;
+}
