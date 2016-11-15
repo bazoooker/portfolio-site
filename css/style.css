@@ -113,7 +113,7 @@ body p {
 	/*background-color: #f5f5f5;*/
 	padding: 50px 0;
 	background-image: url(../img/hero-bg-4.jpg);
-	background-size: cover;
+	background-size: 200%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: 0% 0%;
@@ -123,7 +123,7 @@ body p {
 body .jumbotrone .hello {
 	box-sizing: border-box;
 	max-width: 600px;
-	max-height: 260px;
+	max-height: 303px;
 	margin: 0 auto;
 	position: relative;	
 	color: #fff;
@@ -140,8 +140,11 @@ body .jumbotrone .hello {
 
 .hello h1,
 .hello h2 {
-	padding: 10px 0 20px 100px;
+	/*padding: 10px 0 20px 100px;*/
+	padding: 20px 0;
+	/*margin: 50px auto;*/
 	margin-bottom: 0;
+	text-align: center;
 }
 
 a.btn-hello {
@@ -283,6 +286,7 @@ a.portfolio-button {
 	height: 100%;
 	opacity: 0;
 	transition: 400ms ease;
+	background-color: rgba(0,0,0,.6);
 }
 
 span.portfolio-inner_subheader {
@@ -434,4 +438,65 @@ p.copyright {
 	color: #fff;
 	padding: 50px 0;
 	color: #9ea6ab;
+}
+
+/*===============
+11. responsiveness
+================*/
+
+@media screen and (max-width: 474px) {
+	.hello {
+		margin-bottom: 80px;
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.hello h2 {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 991px) {
+
+	button[type="submit"] {
+		width: 100%;
+	}
+
+	.portfolio-inner{
+		opacity: 1;
+	}
+
+	.portfolio-item {
+		flex-basis: 50%;
+		border: 1px solid #fff;
+	}
+
+	.portfolio-inner h2,
+	.portfolio-inner p,
+	.portfolio-inner a
+	{
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+}
+
+@media screen and (max-width: 491px) {
+	.jumbotrone {	
+	background-size: 300%;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.portfolio-item {
+		flex-basis: 100%;
+		border: 1px solid #fff;		
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.about-me a.btn {
+		width: 100%;
+		margin-top: 25px;
+	}
 }
