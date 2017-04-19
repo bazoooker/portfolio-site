@@ -424,17 +424,21 @@ button[type="submit"] {
 	font-weight: 400;
 }
 
+.footer-menu {
+	display: inline-block;
+}
+
 .footer-menu li {
 	display: inline-block;
 	padding: 50px 10px;
-
 }
 
 .footer-menu li a {
 	color: #9ea6ab;
 }
 
-p.copyright {
+.copyright {
+	float: right;
 	color: #fff;
 	padding: 50px 0;
 	color: #9ea6ab;
@@ -498,5 +502,21 @@ p.copyright {
 	.about-me a.btn {
 		width: 100%;
 		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 605px) {
+	.footer-menu,
+	.copyright {
+		display: block;
+		text-align: center;
+	}
+	.copyright {
+		float: none;
+		padding: 10px 0;
+	}
+	.footer-menu li {
+		display: inline-block;
+		padding: 20px 10px;
 	}
 }
